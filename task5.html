@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rishitha Shop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+      color: #333;
+    }
+    header, footer {
+      text-align: center;
+      padding: 1.5em;
+      background: linear-gradient(to right, #fc466b, #3f5efb);
+      color: white;
+      font-weight: bold;
+    }
+    .shop {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5em;
+      padding: 2em;
+    }
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 1em;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    h3 { color: #ff416c; margin: 0.5em 0; }
+    .price { font-weight: bold; margin-bottom: 1em; }
+    button {
+      margin: 0.3em;
+      padding: 0.6em 1.2em;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      color: white;
+    }
+    .add { background: linear-gradient(to right, #36d1dc, #5b86e5); }
+    .buy { background: linear-gradient(to right, #f7971e, #ffd200); color: #333; }
+    button:hover { opacity: 0.9; }
+    @media(max-width: 600px) {
+      header { font-size: 1.2em; }
+      button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>🛍️ Welcome to Rishitha's Colorful Shop!</header>
+
+  <section class="shop">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1618354691318-6dfb1076b8dd?auto=format&fit=crop&w=600&q=80" alt="Floral Dress">
+      <h3>Floral Dress</h3>
+      <p class="price">$59.99</p>
+      <button class="add" onclick="addToCart('Floral Dress')">Add</button>
+      <button class="buy" onclick="buyNow('Floral Dress')">Buy</button>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1593032465171-b1c8c8892463?auto=format&fit=crop&w=600&q=80" alt="Blue Dress">
+      <h3>Blue Dress</h3>
+      <p class="price">$69.99</p>
+      <button class="add" onclick="addToCart('Blue Dress')">Add</button>
+      <button class="buy" onclick="buyNow('Blue Dress')">Buy</button>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1571867424485-36946427dcac?auto=format&fit=crop&w=600&q=80" alt="Summer Dress">
+      <h3>Summer Dress</h3>
+      <p class="price">$49.99</p>
+      <button class="add" onclick="addToCart('Summer Dress')">Add</button>
+      <button class="buy" onclick="buyNow('Summer Dress')">Buy</button>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1562158074-13557e33617b?auto=format&fit=crop&w=600&q=80" alt="Evening Gown">
+      <h3>Evening Gown</h3>
+      <p class="price">$99.99</p>
+      <button class="add" onclick="addToCart('Evening Gown')">Add</button>
+      <button class="buy" onclick="buyNow('Evening Gown')">Buy</button>
+    </div>
+  </section>
+
+  <footer>© 2025 RishithaShop • Color Your Closet 💖</footer>
+
+  <script>
+    function addToCart(item) {
+      alert(`🛒 ${item} added to cart!`);
+    }
+    function buyNow(item) {
+      alert(`💳 Buying ${item} now!`);
+    }
+  </script>
+
+</body>
+</html>
